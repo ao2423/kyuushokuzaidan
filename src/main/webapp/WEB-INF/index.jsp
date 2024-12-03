@@ -8,7 +8,7 @@
     <title>公益財団法人よこはま学校食育財団</title>
     
   <style>
-    /* ページ全体のスタイル */
+    
     body {
         margin: 0;
         padding: 0;
@@ -19,18 +19,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        min-height: 2000px; /* ページをスクロール可能にするための高さ */
+        min-height: 2000px; 
     }
 
-    /* タイトル */
+
     h1 {
         font-size: 36px;
-        color: black; /* 緑色 */
+        color: black; 
         text-align: center;
         margin-top: 20px;
     }
 
-    /* ヘッダー */
+
     .header {
         width: 100%;
         background-color: white;
@@ -45,9 +45,9 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    display: flex; /* 横並び */
+    display: flex; 
     justify-content: center;
-    white-space: nowrap; /* 改行を防止 */
+    white-space: nowrap;
 }
 
 .header ul li {
@@ -55,27 +55,27 @@
     position: relative;
 }
 
-/* リンクの基本スタイル */
+
 .header ul li a {
     color: black;
     font-size: 18px;
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 変形と影のアニメーション */
-    white-space: nowrap; /* 改行を防止 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap; 
 }
 
-    /* 「食育の推進」を赤色で強調 */
+ 
     .header ul li a.active {
-        color: red;
+        color: #9ACD32;
     }
 
-    /* ホバー時にリスト項目を浮かび上がらせる */
+   
     .header ul li a:hover {
-        background-color: #3cb371; /* 明るい緑 */
-        transform: scale(1.1); /* 1.1倍に拡大 */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 影を追加 */
+        background-color: #3cb371; 
+        transform: scale(1.1); 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
         border-radius: 5px;
     }
 
@@ -84,7 +84,7 @@
         position: absolute;
         top: 50px;
         left: 0;
-        background-color: white; /*一覧表示*/
+        background-color: white; 
         padding: 10px;
         list-style-type: none;
     }
@@ -96,9 +96,11 @@
     .header ul li ul li {
         margin: 5px 0;
     }
-
+    /*ヘッダー画像*/
     .header-image{
+        
         z-index: 1;
+        
     }
 
     /* コンテンツ */
@@ -116,10 +118,11 @@
 
     .sidebar img {
         z-index: 0;
+    
         position: fixed;
         left: 10px;
         top: 100px;
-        transition: opacity 0.5s ease, transform 0.5s ease;  /* opacity と transform の両方を変更 */
+        transition: opacity 0.5s ease, transform 0.5s ease;  
     }
 
     .sidebar #sidebarImage {
@@ -134,28 +137,28 @@
         opacity: 0;
     }
 
-    /* 各セクション */
+   
     .section {
-        margin-bottom: calc(1.5em * 15); /* セクション間隔を15行分開ける (行間を1.5emとして計算) */
+        margin-bottom: calc(1.5em * 15); 
     }
 
     .section h2 {
         font-size: 24px;
         color: black;
-        margin-bottom: 20px; /* 上部の余白 */
+        margin-bottom: 20px; 
     }
 
     .section p {
         font-size: 16px;
-        line-height: 1.8; /* 読みやすいように行間を広げる */
+        line-height: 1.8; /
     }
 
-    /* スクロールした時にヘッダーが消える */
+
     .hide-header {
         display: none;
     }
 
-    /* 食育の推進の横並び項目 */
+    
     .header .horizontal-menu {
         display: flex;
         justify-content: space-around;
@@ -175,11 +178,12 @@
     }
 
     .header .horizontal-menu li a:hover {
-        background-color: pink; /* 明るい緑 */
+        background-color: limegreen;
         border-radius: 5px;
     }
-
+     
     .header-image {
+        grid:
         width: 100%;
         text-align: center;
         margin: 0 auto;
@@ -193,86 +197,84 @@
 
     .news-item {
         display: flex;
-        gap: 10px; /* pタグとaタグの間にスペースを追加 */
-        align-items: baseline; /* テキストのベースラインを揃える */
-        margin-bottom: 20px; /* 各ニュース項目の間隔を広げる */
+        gap: 10px; 
+        align-items: baseline; 
+        margin-bottom: 20px; 
     }
 
     .news-item p {
         margin-right: 100px;
-        margin: 0; /* pタグのデフォルトマージンを削除 */
-        white-space: nowrap; /* 日付部分が折り返されないようにする */
+        margin: 0; 
+        white-space: nowrap; 
     }
 
     .news-item a {
-        text-decoration: none; /* 下線を削除 */
-        color: black; /* リンクの色 */
-        transition: all 0.3s ease; /* スムーズなアニメーション効果を追加 */
+        text-decoration: none; 
+        color: black; 
+        transition: all 0.3s ease; 
     }
 
     .news-item a:hover {
-        color: #ff6347; /* マウスカーソルが合った時のリンク色（トマト色） */
-        transform: scale(1.1); /* リンクを拡大 */
-        font-weight: bold; /* 太字で強調 */
+        color: #ff6347;
+        transform: scale(1.1);
+        font-weight: bold; 
     }
 .secondary-nav {
-    background-color: #f8f8f8; /* 背景色 */
-    padding: 10px 0; /* 上下の余白 */
-    display: flex; /* 横並び配置 */
-    justify-content: center; /* コンテンツを中央寄せ */
-    gap: 20px; /* 各リンク間のスペース */
-    border-top: 1px solid #ccc; /* 上線 */
-    border-bottom: 1px solid #ccc; /* 下線 */
-    position: fixed; /* 画面に固定 */
-    bottom: 0; /* ページの一番下に配置 */
-    width: 100%; /* 横幅をページ全体に */
-    z-index: 1000; /* 他の要素の上に表示 */
+    background-color: #f8f8f8; 
+    padding: 10px 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;
+    border-top: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc; 
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
+    z-index: 1000; 
 }
 
-/* リンクのスタイル */
+
 .secondary-nav a {
-    color: #333; /* リンクの文字色 */
-    text-decoration: none; /* 下線を削除 */
-    font-size: 16px; /* フォントサイズ */
-    padding: 8px 15px; /* 内側の余白 */
-    transition: background-color 0.3s ease, color 0.3s ease; /* ホバー時のスムーズなアニメーション */
+    color: #333; 
+    text-decoration: none; 
+    font-size: 16px; 
+    padding: 8px 15px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* ホバー時のスタイル */
+
 .secondary-nav a:hover {
-    background-color: #e0e0e0; /* 背景色の変更 */
-    color: #007BFF; /* リンクの文字色を青に変更 */
-    border-radius: 5px; /* 角を丸くする */
+    background-color: #e0e0e0; 
+    color: #007BFF; 
+    border-radius: 5px; 
 }
 
-/* フッター全体のスタイル */
-/* 画像を含むフッター内のスタイル */
-/* 画像を含むフッター内のスタイル */
 
 
-/* 画像を含むフッター内のスタイル */
+
+
 .footer-table {
-    width: 100%; /* 横幅を100%にして全体に広げる */
+    width: 100%; 
     margin: 0 auto;
     border-spacing: 0;
     padding: 0 5%;
-    table-layout: fixed; /* セルの幅を均等に */
+    table-layout: fixed; 
 }
 
 .footer-table td {
     vertical-align: top;
-    padding: 20px; /* セルの余白 */
-    text-align: center; /* セル内のテキストを中央に配置 */
+    padding: 20px; 
+    text-align: center; 
 }
 
-/* 画像のスタイル */
+
 .footer-image-img {
     width: 50%;
     height: auto;
-    object-fit: cover; /* 画像がセルに収まるように調整 */
+    object-fit: cover; 
 }
 
-/* 各フッターアイテムのスタイル */
+
 .footer-item h4 {
     margin: 0 0 10px 0;
     font-size: 18px;
@@ -285,7 +287,7 @@
 }
 
 .footer-item li {
-    white-space: nowrap; /* 改行を防止 */
+    white-space: nowrap; 
     padding: 5px 0;
 }
 
@@ -298,7 +300,7 @@
     color: #007BFF;
 }
 
-/* フッター内の最下部の詳細情報 */
+
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
@@ -323,7 +325,13 @@
   background-color: #45a049;
 }
 
-
+ .custom-line {
+    border: none;           /* デフォルトの枠線を消す */
+    height: 2px;            /* 線の太さ */
+    background-color: #9ACD32;  /* 線の色（黄色っぽい緑色） */
+    width: 80%;             /* 線の長さ */
+    margin: 20px auto;      /* 上下の余白、中央揃え */
+  }
 </style>
 </head>
 <body>
@@ -379,7 +387,7 @@
         <img id="sidebarImage2" src="images/3.png">
         </div>
 
-        <!-- 右側のテキスト部分 -->
+        
         <div class="main-text">
             <div class="section">
                 <h2>新着情報</h2>
@@ -441,13 +449,16 @@
             </td>
 
             <!-- 3列目: 会社情報 -->
+            
+   <hr class="custom-line">         
+            
             <td class="footer-item">
-                <h4>会社情報</h4>
+                <h4>SNS</h4>
                 <ul>
-                    <li>会社名: 株式会社サンプル</li>
-                    <li>住所: 〒123-4567 東京都新宿区</li>
-                    <li>電話番号: 03-1234-5678</li>
-                    <li>メール: example@sample.com</li>
+                    <li>youtube</li>
+                    <li>Instagram</li>
+                    <li>x</li>
+                   
                 </ul>
             </td>
         </tr>
